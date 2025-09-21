@@ -1,4 +1,4 @@
-# 🌍 Country Quiz Challenge
+# 🌍 Desafío Country Quiz
 
 Una aplicación interactiva de preguntas de geografía que pone a prueba tus conocimientos sobre países del mundo, banderas y capitales. Construida con React, TypeScript y styled-components.
 
