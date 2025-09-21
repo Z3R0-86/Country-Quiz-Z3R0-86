@@ -14,7 +14,7 @@ Una aplicación interactiva de preguntas de geografía que pone a prueba tus con
 - **Diseño responsivo**: Funciona perfectamente en dispositivos de escritorio y móviles
 - **Puntaje en tiempo real**: Sigue tu progreso con actualizaciones de puntuación instantáneas
 - **Navegación entre preguntas**: Salta a cualquier pregunta usando los indicadores numéricos
-- **⚡ Retroalimentación instantánea**: Ve inmediatamente si tus respuestas son correctas o incorrectas
+- **Retroalimentación instantánea**: Ve inmediatamente si tus respuestas son correctas o incorrectas
 - **Resumen al finalizar**: Resultados detallados con porcentaje de aciertos
 
 
