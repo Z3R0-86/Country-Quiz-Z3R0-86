@@ -65,7 +65,7 @@ npm run build
 npm run preview
 ```
 
-### Development Scripts
+### Scripts de desarrollo
 
 ```bash
 npm run dev          # Start development server
