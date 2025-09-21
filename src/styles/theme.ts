@@ -3,9 +3,9 @@ import { BREAKPOINTS } from '../utils/constants';
 export const theme = {
   colors: {
     primary: {
-      main: '#e65895',
-      secondary: '#bc6be8',
-      gradient: 'linear-gradient(to right, #e65895, #bc6be8)',
+      main: '#f195b2',
+      secondary: '#ee5a93',
+      gradient: 'linear-gradient(135deg, #f195b2 0%, #ee5a93 100%)',
     },
     background: {
       main: '#343964',

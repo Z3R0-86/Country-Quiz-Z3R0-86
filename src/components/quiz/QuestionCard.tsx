@@ -12,6 +12,8 @@ interface QuestionCardProps {
 
 interface OptionProps {
   $selected?: boolean;
+  $isCorrect?: boolean;
+  $isWrong?: boolean;
 }
 
 export function QuestionCard({ 
@@ -51,6 +53,7 @@ export function QuestionCard({
           let showIcon = false;
           let iconSrc = '';
           let isCorrect = false;
+          let isWrong = false;
           
           if (selected) {
             if (option === question.answer) {
@@ -60,6 +63,7 @@ export function QuestionCard({
             } else if (option === selected) {
               showIcon = true;
               iconSrc = '/Close_round_fill.svg';
+              isWrong = true;
             }
           }
           
@@ -67,6 +71,8 @@ export function QuestionCard({
             <Option
               key={index}
               $selected={selected === option}
+              $isCorrect={isCorrect}
+              $isWrong={isWrong}
               onClick={() => handleChoose(option)}
               role="button"
               tabIndex={0}
@@ -142,22 +148,29 @@ const Option = styled.div<OptionProps>`
   text-align: center;
   padding: ${theme.spacing.sm} ${theme.spacing.md};
   min-height: 48px;
-  background-color: ${theme.colors.background.secondary};
-  color: ${theme.colors.text.primary};
   border-radius: ${theme.borderRadius.small};
   cursor: pointer;
   transition: all 0.2s ease;
   
-  background: ${({ $selected }) =>
-    $selected ? theme.colors.primary.gradient : theme.colors.background.secondary};
+  background: ${({ $selected, $isCorrect, $isWrong }) => {
+    if ($isCorrect) return theme.colors.primary.gradient;
+    if ($isWrong) return '#6066d0';
+    if ($selected) return theme.colors.primary.gradient;
+    return theme.colors.background.secondary;
+  }};
+  
+  color: ${theme.colors.text.primary};
 
   &:hover:not([data-correct]) {
-    background-color: ${theme.colors.background.card};
-    transform: translateY(-1px);
-    box-shadow: ${theme.shadows.medium};
+    background-color: ${({ $isCorrect, $isWrong }) => {
+      if ($isCorrect || $isWrong) return 'inherit';
+      return theme.colors.background.card;
+    }};
+    transform: ${({ $isCorrect, $isWrong }) => 
+      $isCorrect || $isWrong ? 'none' : 'translateY(-1px)'};
+    box-shadow: ${({ $isCorrect, $isWrong }) => 
+      $isCorrect || $isWrong ? 'none' : theme.shadows.medium};
   }
-
-  /* No aplicar gradient extra a la respuesta correcta si no fue seleccionada */
 
   &:focus {
     outline: 2px solid ${theme.colors.primary.main};
