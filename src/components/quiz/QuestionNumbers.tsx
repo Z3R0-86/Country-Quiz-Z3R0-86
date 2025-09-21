@@ -56,10 +56,11 @@ const Number = styled.span<NumberProps>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border-radius: ${theme.borderRadius.round};
   font-weight: ${theme.typography.fontWeight.medium};
+  font-size: ${theme.typography.fontSize.small};
   cursor: pointer;
   transition: all 0.2s ease;
   
@@ -70,7 +71,7 @@ const Number = styled.span<NumberProps>`
   }};
 
   &:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
     box-shadow: ${theme.shadows.medium};
   }
 
@@ -80,8 +81,8 @@ const Number = styled.span<NumberProps>`
   }
 
   @media (min-width: ${theme.breakpoints.mobile}) {
-    width: 48px;
-    height: 48px;
-    font-size: ${theme.typography.fontSize.large};
+    width: 32px;
+    height: 32px;
+    font-size: ${theme.typography.fontSize.medium};
   }
 `;
