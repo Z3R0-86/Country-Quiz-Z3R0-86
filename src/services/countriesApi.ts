@@ -2,8 +2,8 @@ import type { Country, ApiCountry } from '../types';
 import { API_CONFIG } from '../utils/constants';
 
 /**
- * Fetch countries data from REST Countries API
- * @returns Promise with formatted country data
+ * Obtener datos de países desde la API pública y formatearlos
+ * @returns Promesa que resuelve a una lista de países formateados
  */
 export async function fetchCountries(): Promise<Country[]> {
   try {
@@ -15,7 +15,7 @@ export async function fetchCountries(): Promise<Country[]> {
     
     const apiCountries: ApiCountry[] = await response.json();
     
-    // Format the data to our internal structure
+    // Formatear los datos según la interfaz interrna
     return apiCountries.map((country) => ({
       name: country.name.common,
       flag: country.flags.svg,

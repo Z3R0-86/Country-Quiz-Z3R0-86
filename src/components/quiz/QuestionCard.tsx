@@ -22,13 +22,13 @@ export function QuestionCard({
 }: QuestionCardProps) {
   const [selected, setSelected] = useState<string | null>(null);
 
-  // Sync with selectedAnswer when question changes
+
   useEffect(() => {
     setSelected(selectedAnswer || null);
   }, [selectedAnswer]);
 
   const handleChoose = (option: string) => {
-    if (selected || readonly) return; // Prevent changing answer after selection or in readonly mode
+    if (selected || readonly) return; // Evita cambiar la seleccción despues de responder la pregunta (cuando vizualiza la respuesta correcta)
     setSelected(option);
     onChoose(option);
   };

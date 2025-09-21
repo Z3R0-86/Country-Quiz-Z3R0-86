@@ -9,10 +9,6 @@ interface UseCountriesDataReturn {
   refetch: () => Promise<void>;
 }
 
-/**
- * Hook to manage countries data fetching
- * Provides loading state, error handling, and refetch functionality
- */
 export function useCountriesData(): UseCountriesDataReturn {
   const [data, setData] = useState<Country[]>([]);
   const [loading, setLoading] = useState(true);

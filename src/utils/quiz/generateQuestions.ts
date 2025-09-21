@@ -3,13 +3,13 @@ import type { Country, Question } from '../../types';
 import { QUIZ_CONFIG } from '../constants';
 
 /**
- * Generate quiz questions from country data
- * Creates both flag and capital questions
+ * Genera preguntas de quiz a partir de datos de países
+ * Crea preguntas de tipo 'bandera' y 'capital' con opciones mezcladas
  */
 export function generateQuestions(countries: Country[]): Question[] {
   const questions: Question[] = [];
 
-  // Flag questions
+  // Preguntas de banderas
   const validFlagCountries = countries.filter((c) => c.flag && c.name);
   validFlagCountries.forEach((country) => {
     const wrongAnswers = shuffle(
@@ -27,7 +27,7 @@ export function generateQuestions(countries: Country[]): Question[] {
     });
   });
 
-  // Capital questions
+  // Preguntas de capitales
   const validCapitalCountries = countries.filter((c) => {
     const capital = Array.isArray(c.capital) ? c.capital[0] : c.capital;
     return capital && typeof capital === "string" && capital.trim() !== "";
@@ -52,6 +52,6 @@ export function generateQuestions(countries: Country[]): Question[] {
     });
   });
 
-  // Shuffle all questions and limit to configured amount
+  // Mezclar todas las preguntas y limitar al total configurado
   return shuffle(questions).slice(0, QUIZ_CONFIG.TOTAL_QUESTIONS);
 }

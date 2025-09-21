@@ -1,6 +1,6 @@
 /**
- * Fisher-Yates shuffle algorithm
- * Randomly shuffles array elements in-place
+ * Algoitmo de mezcla de Fisher-Yates
+ * Baraja los elementos de una matriz de forma aleatoria
  */
 export function shuffle<T>(array: T[]): T[] {
   const arr = [...array];
