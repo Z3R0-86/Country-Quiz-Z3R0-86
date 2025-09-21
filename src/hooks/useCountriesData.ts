@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Country } from '../types';
+import type { Country } from '../types';
 import { fetchCountries } from '../services/countriesApi';
 
 interface UseCountriesDataReturn {

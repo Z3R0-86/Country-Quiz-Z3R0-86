@@ -1,5 +1,5 @@
 import { shuffle } from '../array';
-import { Country, Question } from '../../types';
+import type { Country, Question } from '../../types';
 import { QUIZ_CONFIG } from '../constants';
 
 /**

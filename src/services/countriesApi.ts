@@ -1,4 +1,4 @@
-import { Country, ApiCountry } from '../types';
+import type { Country, ApiCountry } from '../types';
 import { API_CONFIG } from '../utils/constants';
 
 /**

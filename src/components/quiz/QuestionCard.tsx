@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Question } from '../../types';
+import type { Question } from '../../types';
 import { theme } from '../../styles/theme';
 
 interface QuestionCardProps {
