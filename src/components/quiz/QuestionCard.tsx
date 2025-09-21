@@ -155,9 +155,7 @@ const Option = styled.div<OptionProps>`
     box-shadow: ${theme.shadows.medium};
   }
 
-  &[data-correct="true"] {
-    background: ${theme.colors.primary.gradient};
-  }
+  /* No aplicar gradient extra a la respuesta correcta si no fue seleccionada */
 
   &:focus {
     outline: 2px solid ${theme.colors.primary.main};
