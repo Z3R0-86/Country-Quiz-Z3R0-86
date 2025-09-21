@@ -1,4 +1,4 @@
-# 🌍 Country Quiz Challenge
+# 🌍 Desafío Country Quiz
 
 Una aplicación interactiva de preguntas de geografía que pone a prueba tus conocimientos sobre países del mundo, banderas y capitales. Construida con React, TypeScript y styled-components.
 
@@ -6,7 +6,7 @@ Una aplicación interactiva de preguntas de geografía que pone a prueba tus con
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue.svg)
 ![Styled Components](https://img.shields.io/badge/Styled%20Components-6.1.18-hotpink.svg)
 
-## 🚀 Features
+## 🚀 Funcionalidades
 
 - **Quiz interactivo:**: 10 preguntas aleatorias por sesión
 - **Reconocimiento de banderas**: Identifica países por sus banderas
@@ -14,7 +14,7 @@ Una aplicación interactiva de preguntas de geografía que pone a prueba tus con
 - **Diseño responsivo**: Funciona perfectamente en dispositivos de escritorio y móviles
 - **Puntaje en tiempo real**: Sigue tu progreso con actualizaciones de puntuación instantáneas
 - **Navegación entre preguntas**: Salta a cualquier pregunta usando los indicadores numéricos
-- **⚡ Retroalimentación instantánea**: Ve inmediatamente si tus respuestas son correctas o incorrectas
+- **Retroalimentación instantánea**: Ve inmediatamente si tus respuestas son correctas o incorrectas
 - **Resumen al finalizar**: Resultados detallados con porcentaje de aciertos
 
 
@@ -65,7 +65,7 @@ npm run build
 npm run preview
 ```
 
-### Development Scripts
+### Scripts de desarrollo
 
 ```bash
 npm run dev          # Start development server
@@ -85,7 +85,7 @@ npm run type-check   # Run TypeScript checks
 6. **Juega de nuevo**: Reinicia con un nuevo set de preguntas
 
 
-## 👨‍💻 Autor
+## Autor
 
 **Z3R0-86**
 - Email: k86029@gmail.com
