@@ -6,7 +6,7 @@ Una aplicación interactiva de preguntas de geografía que pone a prueba tus con
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue.svg)
 ![Styled Components](https://img.shields.io/badge/Styled%20Components-6.1.18-hotpink.svg)
 
-## 🚀 Features
+## 🚀 Funcionalidades
 
 - **Quiz interactivo:**: 10 preguntas aleatorias por sesión
 - **Reconocimiento de banderas**: Identifica países por sus banderas
