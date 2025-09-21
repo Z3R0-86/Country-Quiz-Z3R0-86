@@ -74,11 +74,13 @@ export function QuestionCard({
               data-correct={isCorrect}
             >
               <OptionText>{option}</OptionText>
-              <OptionIcon
-                src={iconSrc}
-                style={{ opacity: showIcon ? 1 : 0 }}
-                alt={isCorrect ? 'Correct answer' : 'Wrong answer'}
-              />
+              {iconSrc && (
+                <OptionIcon
+                  src={iconSrc}
+                  style={{ opacity: showIcon ? 1 : 0 }}
+                  alt={isCorrect ? 'Correct answer' : 'Wrong answer'}
+                />
+              )}
             </Option>
           );
         })}
