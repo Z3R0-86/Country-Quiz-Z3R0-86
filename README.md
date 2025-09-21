@@ -85,7 +85,7 @@ npm run type-check   # Run TypeScript checks
 6. **Juega de nuevo**: Reinicia con un nuevo set de preguntas
 
 
-## 👨‍💻 Autor
+## Autor
 
 **Z3R0-86**
 - Email: k86029@gmail.com
