@@ -100,7 +100,9 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   gap: ${theme.spacing.xxl};
-  margin-top: 0;
+  margin-top: 0
+  max-width: 500px; // Limita el ancho máximo del marco
+  width: 100%;
 `;
 
 const FlagQuestionWrapper = styled.div`
@@ -116,7 +118,7 @@ const FlagQuestionWrapper = styled.div`
 `;
 
 const FlagImage = styled.img`
-  width: 48px;
+  width: 40px;
   height: auto;
   border-radius: ${theme.borderRadius.small};
   box-shadow: ${theme.shadows.small};
@@ -134,6 +136,8 @@ const OptionsGrid = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: ${theme.spacing.lg};
   width: 100%;
+   max-width: 455px; // Limita el ancho máximo del grid
+
 
   @media (max-width: ${theme.breakpoints.mobile}) {
     grid-template-columns: 1fr;
@@ -147,8 +151,8 @@ const Option = styled.div<OptionProps>`
   justify-content: space-between;
   gap: ${theme.spacing.sm};
   text-align: center;
-  padding: ${theme.spacing.md} ${theme.spacing.lg};
-  min-height: 56px;
+  padding: ${theme.spacing.sm} ${theme.spacing.md};
+  min-height: 48px;
   border-radius: ${theme.borderRadius.small};
   cursor: pointer;
   transition: all 0.2s ease;
@@ -179,8 +183,8 @@ const Option = styled.div<OptionProps>`
   }
 
   @media (min-width: ${theme.breakpoints.mobile}) {
-    padding: ${theme.spacing.lg} ${theme.spacing.xl};
-    min-height: 64px;
+    padding: ${theme.spacing.md} ${theme.spacing.lg};
+    min-height: 56px;
   }
 `;
 
@@ -190,8 +194,8 @@ const OptionText = styled.span`
 `;
 
 const OptionIcon = styled.img`
-  width: 16px;
-  height: 16px;
+  width: 11px;
+  height: 11px;
   flex-shrink: 0;
   transition: opacity 0.2s ease;
 `;
