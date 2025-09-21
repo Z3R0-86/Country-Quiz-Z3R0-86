@@ -50,17 +50,21 @@ const Wrapper = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   gap: ${theme.spacing.sm};
+
+  @media (min-width: ${theme.breakpoints.mobile}) {
+    gap: ${theme.spacing.md};
+  }
 `;
 
 const Number = styled.span<NumberProps>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 40px;
+  height: 40px;
   border-radius: ${theme.borderRadius.round};
   font-weight: ${theme.typography.fontWeight.medium};
-  font-size: ${theme.typography.fontSize.small};
+  font-size: ${theme.typography.fontSize.medium};
   cursor: pointer;
   transition: all 0.2s ease;
   
@@ -81,8 +85,8 @@ const Number = styled.span<NumberProps>`
   }
 
   @media (min-width: ${theme.breakpoints.mobile}) {
-    width: 32px;
-    height: 32px;
-    font-size: ${theme.typography.fontSize.medium};
+    width: 48px;
+    height: 48px;
+    font-size: ${theme.typography.fontSize.large};
   }
 `;

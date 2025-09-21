@@ -46,3 +46,9 @@ Thumbs.db
 # Temporary folders
 tmp/
 temp/
+
+# Test/comparison files
+solucion.png
+mio.png
+original.png
+captura.png

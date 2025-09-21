@@ -11,7 +11,7 @@ export function QuizHeader({ score, totalQuestions }: QuizHeaderProps) {
     <Wrapper>
       <Title>Country Quiz</Title>
       <ScoreDisplay>
-        {score}/{totalQuestions} Points
+        🏆 {score}/{totalQuestions} Points
       </ScoreDisplay>
     </Wrapper>
   );

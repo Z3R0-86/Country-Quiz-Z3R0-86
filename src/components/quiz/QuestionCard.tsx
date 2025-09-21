@@ -99,8 +99,8 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: ${theme.spacing.xl};
-  margin-top: ${theme.spacing.xl};
+  gap: ${theme.spacing.xxl};
+  margin-top: 0;
 `;
 
 const FlagQuestionWrapper = styled.div`
@@ -132,11 +132,12 @@ const QuestionText = styled.h2`
 const OptionsGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: ${theme.spacing.md};
+  gap: ${theme.spacing.lg};
   width: 100%;
 
   @media (max-width: ${theme.breakpoints.mobile}) {
     grid-template-columns: 1fr;
+    gap: ${theme.spacing.md};
   }
 `;
 
@@ -146,8 +147,8 @@ const Option = styled.div<OptionProps>`
   justify-content: space-between;
   gap: ${theme.spacing.sm};
   text-align: center;
-  padding: ${theme.spacing.sm} ${theme.spacing.md};
-  min-height: 48px;
+  padding: ${theme.spacing.md} ${theme.spacing.lg};
+  min-height: 56px;
   border-radius: ${theme.borderRadius.small};
   cursor: pointer;
   transition: all 0.2s ease;
@@ -178,8 +179,8 @@ const Option = styled.div<OptionProps>`
   }
 
   @media (min-width: ${theme.breakpoints.mobile}) {
-    padding: ${theme.spacing.md};
-    min-height: 56px;
+    padding: ${theme.spacing.lg} ${theme.spacing.xl};
+    min-height: 64px;
   }
 `;
 
