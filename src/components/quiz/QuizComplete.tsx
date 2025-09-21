@@ -13,7 +13,7 @@ export function QuizComplete({ score, totalQuestions, onRestart }: QuizCompleteP
   return (
     <Wrapper>
       <CongratsImage src="/congrats.png" alt="Congratulations" />
-      <Title>Congrats! You completed the quiz.</Title>
+      <Title>Congratulations! You completed the quiz.</Title>
       <ScoreText>
         You answered <Strong>{score}/{totalQuestions}</Strong> correctly
       </ScoreText>
