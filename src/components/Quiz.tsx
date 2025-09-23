@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { Container, QuizContainer } from './layout/Container';
+import { Container, QuizContainer, QuizCompleteWrapper } from './layout/Container';
 import { QuizHeader, QuestionNumbers, QuestionCard, QuizComplete } from './quiz';
 import { useCountriesData } from '../hooks/useCountriesData';
 import { generateQuestions } from '../utils/quiz';
@@ -123,11 +123,13 @@ export function Quiz() {
           </QuizContainer>
         </>
       ) : (
-        <QuizComplete
-          score={score}
-          totalQuestions={questions.length}
-          onRestart={handleRestart}
-        />
+        <QuizCompleteWrapper>
+          <QuizComplete
+            score={score}
+            totalQuestions={questions.length}
+            onRestart={handleRestart}
+          />
+        </QuizCompleteWrapper>
       )}
     </Container>
   );

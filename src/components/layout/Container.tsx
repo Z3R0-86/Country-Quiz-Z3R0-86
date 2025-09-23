@@ -22,3 +22,11 @@ export const QuizContainer = styled.div`
     padding: ${theme.spacing.xxl} ${theme.spacing.xxl};
   }
 `;
+
+export const QuizCompleteWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+  width: 100%;
+`;

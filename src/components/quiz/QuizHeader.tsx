@@ -44,7 +44,7 @@ const ScoreDisplay = styled.div`
   background: ${theme.colors.primary.gradient};
   color: ${theme.colors.text.secondary};
   padding: ${theme.spacing.sm} ${theme.spacing.md};
-  border-radius: ${theme.borderRadius.small};
+  border-radius: ${theme.borderRadius.large};
   font-weight: ${theme.typography.fontWeight.semibold};
   font-size: ${theme.typography.fontSize.large};
   box-shadow: ${theme.shadows.small};
