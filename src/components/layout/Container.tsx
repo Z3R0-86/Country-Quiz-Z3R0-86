@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { theme } from '../../styles/theme';
 
 export const Container = styled.div`
-  width: 100%;
-  max-width: 900px;
+  width: 65%;
+  max-width: 850px;
   margin: 0 auto;
   padding: 0 ${theme.spacing.md};
 `;
