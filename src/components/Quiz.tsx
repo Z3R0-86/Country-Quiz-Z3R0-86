@@ -1,6 +1,12 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Container, QuizContainer, QuizCompleteWrapper } from './layout/Container';
-import { QuizHeader, QuestionNumbers, QuestionCard, QuizComplete } from './quiz';
+/*import { QuizHeader, QuestionNumbers, QuestionCard, QuizComplete } from './quiz';*/
+
+import { QuizHeader } from './quiz';
+import { QuestionNumbers } from './quiz/QuestionNumbers';
+import { QuestionCard } from './quiz/QuestionCard';
+import { QuizComplete } from './quiz/QuizComplete';
+
 import { useCountriesData } from '../hooks/useCountriesData';
 import { generateQuestions } from '../utils/quiz';
 import { QUIZ_CONFIG } from '../utils/constants';
