@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { theme } from '../../styles/theme';
 
 export const Container = styled.div`
-  width: 65%;
+  width: 60%;
   max-width: 850px;
   margin: 0 auto;
   padding: 0 ${theme.spacing.md};
@@ -12,7 +12,7 @@ export const QuizContainer = styled.div`
   background-color: ${theme.colors.background.main};
   padding: ${theme.spacing.xxl} ${theme.spacing.xl};
   border-radius: ${theme.borderRadius.medium};
-  margin-top: 48px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   gap: ${theme.spacing.xl};
