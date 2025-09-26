@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { Container, QuizContainer, QuizCompleteWrapper } from './layout/Container';
 /*import { QuizHeader, QuestionNumbers, QuestionCard, QuizComplete } from './quiz';*/
 
-import { QuizHeader } from './quiz';
+import { QuizHeader } from './quiz/QuizHeader';
 import { QuestionNumbers } from './quiz/QuestionNumbers';
 import { QuestionCard } from './quiz/QuestionCard';
 import { QuizComplete } from './quiz/QuizComplete';
