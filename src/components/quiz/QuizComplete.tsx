@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { theme } from '../../styles/theme';
+import { QUIZ_TEXTS } from '../../utils/constants';
 
 interface QuizCompleteProps {
   score: number;
@@ -12,16 +13,24 @@ export function QuizComplete({ score, totalQuestions, onRestart }: QuizCompleteP
   
   return (
     <Wrapper>
-      <CongratsImage src="/congrats.png" alt="Congratulations" />
-      <Title>Congratulations! You completed the quiz.</Title>
+      <CongratsImage 
+        src="/congrats.png" 
+        alt={QUIZ_TEXTS.congratulations}
+        width="150"
+        height="150"
+      />
+      <Title role="heading" aria-level={1}>{QUIZ_TEXTS.congratulations}</Title>
       <ScoreText>
-        You answered <Strong>{score}/{totalQuestions}</Strong> correctly
+        {QUIZ_TEXTS.correctAnswers} <Strong>{score}/{totalQuestions}</Strong> {QUIZ_TEXTS.correctly}
       </ScoreText>
       <PercentageText>
-        That's <Strong>{percentage}%</Strong> accuracy!
+        {QUIZ_TEXTS.accuracy}: <Strong>{percentage}%</Strong>
       </PercentageText>
-      <RestartButton onClick={onRestart}>
-        Play Again
+      <RestartButton 
+        onClick={onRestart}
+        aria-label={QUIZ_TEXTS.playAgain}
+      >
+        {QUIZ_TEXTS.playAgain}
       </RestartButton>
     </Wrapper>
   );

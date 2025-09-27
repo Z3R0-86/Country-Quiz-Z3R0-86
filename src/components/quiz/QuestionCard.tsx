@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import type { Question } from '../../types';
 import { theme } from '../../styles/theme';
+import { QUIZ_TEXTS } from '../../utils/constants';
 
 interface QuestionCardProps {
   question: Question;
@@ -41,7 +42,13 @@ export function QuestionCard({
         {question.type === 'flag' ? (
           <FlagQuestionWrapper>
             <span>Which country's flag is this?</span>
-            <FlagImage src={question.image} alt="Country flag" />
+            <FlagImage 
+              src={question.image} 
+              alt={QUIZ_TEXTS.flag_aria}
+              width="40"
+              height="30"
+              loading="lazy"
+            />
           </FlagQuestionWrapper>
         ) : (
           question.prompt
@@ -76,7 +83,9 @@ export function QuestionCard({
               onClick={() => handleChoose(option)}
               role="button"
               tabIndex={0}
-              aria-label={`Select option: ${option}`}
+              aria-label={`${QUIZ_TEXTS.option_aria}${option}`}
+              aria-pressed={selected === option}
+              aria-disabled={readonly}
               data-correct={isCorrect}
             >
               <OptionText>{option}</OptionText>
