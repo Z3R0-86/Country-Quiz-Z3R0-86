@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
 
   @media (max-width: ${theme.breakpoints.mobile}) {
     body {
-      background-image: url("/bg-sm.jpg");
+      background-image: url("/bg-sm.avif");
     }
   }
 
