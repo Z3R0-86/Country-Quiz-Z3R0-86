@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, lazy, Suspense } from 'react';
+import { useState, useEffect, useMemo, lazy } from 'react';
 import { Container, QuizContainer, QuizCompleteWrapper } from './layout/Container';
 /*import { QuizHeader, QuestionNumbers, QuestionCard, QuizComplete } from './quiz';*/
 

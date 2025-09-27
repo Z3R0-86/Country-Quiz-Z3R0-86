@@ -10,9 +10,7 @@ export default defineConfig({
         manualChunks: {
           'vendor': ['react', 'react-dom'],
           'styles': ['styled-components'],
-          'quiz': ['./src/components/quiz/'],
-          'utils': ['./src/utils/'],
-          'hooks': ['./src/hooks/']
+          'quiz': ['/src/components/quiz/QuizComplete.tsx']
         }
       }
     },
