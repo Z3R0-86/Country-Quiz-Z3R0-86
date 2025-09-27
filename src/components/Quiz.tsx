@@ -45,17 +45,20 @@ export function Quiz() {
     if (!answered) return;
     
     const timeoutId = setTimeout(() => {
-      if (currentQuestion < questions.length - 1) {
+      // Verificar si todas las preguntas han sido respondidas
+      const allQuestionsAnswered = userAnswers.every(answer => answer !== null);
+      
+      if (allQuestionsAnswered) {
+        // Si todas están respondidas, mostrar resultado
+        setCurrentQuestion(questions.length);
+      } else if (currentQuestion < questions.length - 1) {
+        // Si aún hay preguntas sin responder y no estamos en la última,
+        // avanzar a la siguiente pregunta
         setCurrentQuestion((prev) => prev + 1);
-      } else {
-        // Verificar si el usuario ha respondido todas las preguntas antes de mostrar el resultado final
-        // Evita que se muestre la pantalla de resultados si hay preguntas sin responder
-        const allQuestionsAnswered = userAnswers.every(answer => answer !== null);
-        if (allQuestionsAnswered) {
-          // Solo mostrar resultado si todas las preguntas están respondidas
-          setCurrentQuestion(questions.length);
-        }
       }
+      // Si estamos en la última pregunta y faltan respuestas,
+      // no hacemos nada (permitiendo al usuario navegar a las faltantes)
+      
       setAnswered(false);
     }, QUIZ_CONFIG.ANSWER_DELAY_MS);
     
