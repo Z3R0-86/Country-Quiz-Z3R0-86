@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-image: url("/bg.jpg");
+    background-image: url("/bg.avif");
     min-height: 100vh;
     background-size: cover;
     background-position: center;

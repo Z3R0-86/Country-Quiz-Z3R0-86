@@ -14,7 +14,7 @@ export function QuizComplete({ score, totalQuestions, onRestart }: QuizCompleteP
   return (
     <Wrapper>
       <CongratsImage 
-        src="/congrats.png" 
+        src="/congrats.avif" 
         alt={QUIZ_TEXTS.congratulations}
         width="150"
         height="150"
