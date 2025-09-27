@@ -8,7 +8,7 @@ interface QuizCompleteProps {
   onRestart?: () => void;
 }
 
-export function QuizComplete({ score, totalQuestions, onRestart }: QuizCompleteProps) {
+export default function QuizComplete({ score, totalQuestions, onRestart }: QuizCompleteProps) {
   const percentage = Math.round((score / totalQuestions) * 100);
   
   return (
