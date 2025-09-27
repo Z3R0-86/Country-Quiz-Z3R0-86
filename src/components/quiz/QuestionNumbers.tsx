@@ -23,7 +23,7 @@ export function QuestionNumbers({
   return (
     <Wrapper>
       {range(numOfQuestions).map((num) => {
-        const questionIndex = num - 1; // Convert from 1-indexed to 0-indexed
+        const questionIndex = num - 1; // Convertir de indexado 1 a indexado 0
         const isAnswered = userAnswers[questionIndex] !== null;
         
         return (

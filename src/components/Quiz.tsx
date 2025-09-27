@@ -21,11 +21,10 @@ export function Quiz() {
 
   const questions = useMemo(
     () => generateQuestions(data),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [data, quizSeed] // quizSeed is needed to regenerate questions on restart
+    [data, quizSeed] // se necesita quizSeed para regenerar preguntas al reiniciar el quiz
   );
 
-  // Initialize userAnswers when questions are ready
+  // Inicializar userAnswers cuando las preguntas estén listas
   useEffect(() => {
     if (questions.length > 0 && userAnswers.length !== questions.length) {
       setUserAnswers(Array(questions.length).fill(null));
@@ -34,7 +33,7 @@ export function Quiz() {
 
   const selectedQuestion = questions[currentQuestion];
 
-  // Auto advance after answering
+  // Auto avance después de responder
   useEffect(() => {
     if (!answered) return;
     
@@ -42,7 +41,7 @@ export function Quiz() {
       if (currentQuestion < questions.length - 1) {
         setCurrentQuestion((prev) => prev + 1);
       } else {
-        // Last question answered, show final result
+        // Última pregunta respondida, marcar quiz como completo
         setCurrentQuestion(questions.length);
       }
       setAnswered(false);
@@ -51,7 +50,7 @@ export function Quiz() {
     return () => clearTimeout(timeoutId);
   }, [answered, currentQuestion, questions.length]);
 
-  // Handle user's choice
+  // Manejar la elección del usuario
   function handleQuestionChoice(choice: string) {
     setUserAnswers((prev) => {
       const updated = [...prev];
@@ -59,7 +58,7 @@ export function Quiz() {
       return updated;
     });
 
-    // Recalculate score
+    // Recalcular la puntuación
     const newScore = questions.reduce((acc, q, i) => {
       return acc + (userAnswers[i] === q.answer || (i === currentQuestion && choice === q.answer) ? 1 : 0);
     }, 0);
@@ -68,12 +67,12 @@ export function Quiz() {
     setAnswered(true);
   }
 
-  // Navigate to specific question
+  // Navegar a una pregunta específica
   function goToQuestion(index: number) {
     setCurrentQuestion(index);
   }
 
-  // Restart quiz
+  // Reiniciar quiz
   function handleRestart() {
     setCurrentQuestion(0);
     setScore(0);
@@ -120,11 +119,11 @@ export function Quiz() {
             />
 
             <QuestionCard
-              key={currentQuestion} // Force re-render
+              key={currentQuestion} // Forzar re-rnderizado
               question={selectedQuestion}
               onChoose={handleQuestionChoice}
               selectedAnswer={userAnswers[currentQuestion]}
-              readonly={answered} // Only readonly during feedback period
+              readonly={answered} // Solo lectura si ya se respondió
             />
           </QuizContainer>
         </>
