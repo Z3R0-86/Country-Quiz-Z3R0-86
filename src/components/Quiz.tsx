@@ -11,7 +11,7 @@ import { useCountriesData } from '../hooks/useCountriesData';
 import { generateQuestions } from '../utils/quiz';
 import { QUIZ_CONFIG, QUIZ_TEXTS } from '../utils/constants';
 
-export function Quiz() {
+export default function Quiz() {
   // Hook personalizado que obtiene los datos de países de la API
   const { data, loading, error } = useCountriesData();
   // Estados del quiz
