@@ -3,7 +3,7 @@ import { theme } from '../../styles/theme';
 
 export const Container = styled.div`
   width: 92%;
-  max-width: 850px;
+  max-width: 872px;
   margin: 0 auto;
   padding: 0 ${theme.spacing.sm};
 
