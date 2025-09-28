@@ -5,14 +5,10 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/.*\\.(js|css|svg|png|jpg|jpeg|gif|woff2|woff|ttf|eot)",
-      "dest": "/$0"
-    },
-    {
-      "src": "/.*",
-      "dest": "/index.html"
+      "source": "/((?!.*\\.(js|css|svg|png|jpg|jpeg|gif|woff2|woff|ttf|eot)$).*)",
+      "destination": "/index.html"
     }
   ],
   "headers": [
